@@ -154,4 +154,91 @@ Tipus: Programació paral·lela
 
 Raó: La imatge es pot dividir en blocs petits que es poden renderitzar simultàniament en diferents nuclis, accelerant molt el procés.
 
+##7.
+
+### **Què pretén fer el codi**
+
+El programa simula la lectura de diversos sensors en paral·lel, cadascun executat en un thread. Cada thread genera 100.000 lectures aleatòries entre -20 i 50, actualitza el valor de la seva posició a l’array `Readings`, i actualitza els valors globals de màxim i mínim (`GlobalMax`, `GlobalMin`). Al final, mostra el màxim, el mínim i el temps total de processament.
+
+---
+
+### **Errors**
+
+1. **Condicions de carrera (Race conditions)**
+    - Les variables globals `GlobalMax` i `GlobalMin` són modificades per múltiples threads sense cap protecció. Això pot provocar resultats incorrectes, ja que dos threads poden llegir i escriure simultàniament.
+    - L’array `Readings` també es pot veure afectat si s’accedeix simultàniament.
+2. **Ús incorrecte de Random**
+    - L’objecte `Random rng` es comparteix entre tots els threads. `Random` no és thread-safe, i això pot provocar valors repetits o errors.
+3. **Gestió incorrecta del temps**
+    - El cronòmetre `StopWatch` (a més, mal escrit com `Stopwacth` i `StarNew()`) es fa servir dins de cada thread, però només s’hauria d’iniciar i aturar al fil principal per mesurar el temps total.
+4. **No s’espera la finalització dels threads**
+    - El programa mostra els resultats abans que els threads acabin, així que els valors de màxim, mínim i el temps no són vàlids.
+5. **Errors de sintaxi i tipografia**
+    - `StopWatch` està mal escrit.
+    - `StarNew()` i `Restart()` no són mètodes vàlids de `Stopwatch`.
+    - Falta `using System.Threading;` i `using System.Diagnostics;`.
+
+---
+
+## Codi reescrit i corregit
+
+```csharp
+using System;
+using System.Threading;
+using System.Diagnostics;
+
+namespace SensorRace
+{
+    class Program
+    {
+        public static int[] Readings;
+        public static int GlobalMax = int.MinValue;
+        public static int GlobalMin = int.MaxValue;
+        private static readonly object lockObj = new object();
+
+        static void Main(string[] args)
+        {
+            Console.Write("Introdueix el nombre de sensors: ");
+            int sensors = int.Parse(Console.ReadLine());
+            Stopwatch sw = Stopwatch.StartNew();
+
+            Readings = new int[sensors];
+            Thread[] threads = new Thread[sensors];
+
+            for (int i = 0; i < sensors; i++)
+            {
+                int id = i;
+                threads[i] = new Thread(() =>
+                {
+                    // Cada thread té el seu propi Random
+                    Random rng = new Random(Guid.NewGuid().GetHashCode());
+                    for (int j = 0; j < 100000; j++)
+                    {
+                        int value = rng.Next(-20, 51);
+                        Readings[id] = value;
+
+                        lock (lockObj)
+                        {
+                            if (value > GlobalMax)
+                                GlobalMax = value;
+                            if (value < GlobalMin)
+                                GlobalMin = value;
+                        }
+                    }
+                });
+                threads[i].Start();
+            }
+
+            // Espera que tots els threads acabin
+            foreach (var thread in threads)
+                thread.Join();
+
+            sw.Stop();
+            Console.WriteLine($"Final – Max: {GlobalMax}, Min: {GlobalMin}");
+            Console.WriteLine($"Total Process time: {sw.Elapsed.TotalMilliseconds} ms");
+        }
+    }
+}
+```
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/_qWLA2_7)
