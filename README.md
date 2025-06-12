@@ -154,7 +154,7 @@ Tipus: Programació paral·lela
 
 Raó: La imatge es pot dividir en blocs petits que es poden renderitzar simultàniament en diferents nuclis, accelerant molt el procés.
 
-##7.
+## 7.
 
 ### **Què pretén fer el codi**
 
