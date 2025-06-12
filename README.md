@@ -1,157 +1,157 @@
-# T2. 2ona Convocatòria: Recull d’activitats
+# T2. 2ona ConvocatÃ²ria: Recull dâ€™activitats
 
 ## 1.
 
-   1\. Bases de dades distribuïdes (ex: Apache Cassandra, MongoDB, Couchbase)  
+   1\. Bases de dades distribuÃ¯des (ex: Apache Cassandra, MongoDB, Couchbase)  
      
-   Què fan: Gestionen i emmagatzemen dades repartides entre diversos servidors o ubicacions geogràfiques. Permeten que múltiples usuaris accedeixin, modifiquin i consultin dades de manera simultània i eficient.  
+   QuÃ¨ fan: Gestionen i emmagatzemen dades repartides entre diversos servidors o ubicacions geogrÃ fiques. Permeten que mÃºltiples usuaris accedeixin, modifiquin i consultin dades de manera simultÃ nia i eficient.  
      
-   Per què han de ser distribuïdes: Això garanteix alta disponibilitat, tolerància a fallades (si cau un node, els altres segueixen funcionant) i escalabilitat, ja que es poden afegir més servidors fàcilment per gestionar més volum de dades o més usuaris.  
+   Per quÃ¨ han de ser distribuÃ¯des: AixÃ² garanteix alta disponibilitat, tolerÃ ncia a fallades (si cau un node, els altres segueixen funcionant) i escalabilitat, ja que es poden afegir mÃ©s servidors fÃ cilment per gestionar mÃ©s volum de dades o mÃ©s usuaris.  
      
-   2\. Plataformes de computació en núvol (ex: Amazon Web Services, Microsoft Azure)  
+   2\. Plataformes de computaciÃ³ en nÃºvol (ex: Amazon Web Services, Microsoft Azure)  
      
-   Què fan: Ofereixen serveis informàtics (emmagatzematge, processament, bases de dades, etc.) a través d’Internet, utilitzant una infraestructura global de servidors interconnectats.  
+   QuÃ¨ fan: Ofereixen serveis informÃ tics (emmagatzematge, processament, bases de dades, etc.) a travÃ©s dâ€™Internet, utilitzant una infraestructura global de servidors interconnectats.  
      
-   Per què han de ser distribuïdes: Permeten repartir la càrrega de treball, garantir la disponibilitat global, escalar recursos segons la demanda i assegurar la continuïtat del servei davant possibles fallades locals.  
+   Per quÃ¨ han de ser distribuÃ¯des: Permeten repartir la cÃ rrega de treball, garantir la disponibilitat global, escalar recursos segons la demanda i assegurar la continuÃ¯tat del servei davant possibles fallades locals.  
      
    3\. Xarxes Blockchain i criptomonedes (ex: Bitcoin, Ethereum)  
      
-   Què fan: Gestionen registres digitals (blockchain) on es registren transaccions de manera segura i immutable, sense necessitat d’una autoritat central.  
+   QuÃ¨ fan: Gestionen registres digitals (blockchain) on es registren transaccions de manera segura i immutable, sense necessitat dâ€™una autoritat central.  
      
-   Per què han de ser distribuïdes: La descentralització garanteix la seguretat i la resistència a manipulacions, ja que la informació es replica i valida per milers de nodes independents arreu del món.  
+   Per quÃ¨ han de ser distribuÃ¯des: La descentralitzaciÃ³ garanteix la seguretat i la resistÃ¨ncia a manipulacions, ja que la informaciÃ³ es replica i valida per milers de nodes independents arreu del mÃ³n.  
      
-   4\. Sistemes de compartició d’arxius P2P (ex: BitTorrent)  
+   4\. Sistemes de comparticiÃ³ dâ€™arxius P2P (ex: BitTorrent)  
      
-   Què fan: Permeten compartir i descarregar arxius entre usuaris sense passar per un servidor central. Cada usuari pot ser alhora client i servidor.  
+   QuÃ¨ fan: Permeten compartir i descarregar arxius entre usuaris sense passar per un servidor central. Cada usuari pot ser alhora client i servidor.  
      
-   Per què han de ser distribuïdes: Això fa que el sistema sigui molt eficient, escalable i tolerant a fallades, ja que la disponibilitat dels arxius no depèn d’un únic punt i la càrrega es reparteix entre tots els participants.  
+   Per quÃ¨ han de ser distribuÃ¯des: AixÃ² fa que el sistema sigui molt eficient, escalable i tolerant a fallades, ja que la disponibilitat dels arxius no depÃ¨n dâ€™un Ãºnic punt i la cÃ rrega es reparteix entre tots els participants.  
      
    5\. Plataformes de processament de grans volums de dades (ex: Apache Hadoop)  
      
-   Què fan: Permeten processar i analitzar enormes quantitats de dades (big data) utilitzant centenars o milers de servidors que treballen en paral·lel.  
+   QuÃ¨ fan: Permeten processar i analitzar enormes quantitats de dades (big data) utilitzant centenars o milers de servidors que treballen en paralÂ·lel.  
      
-   Per què han de ser distribuïdes: El volum de dades i la necessitat de processament ràpid fan inviable fer-ho en un sol ordinador. La distribució permet dividir la feina i obtenir resultats molt més ràpidament.
+   Per quÃ¨ han de ser distribuÃ¯des: El volum de dades i la necessitat de processament rÃ pid fan inviable fer-ho en un sol ordinador. La distribuciÃ³ permet dividir la feina i obtenir resultats molt mÃ©s rÃ pidament.
 
 ## 2.
 
-1\. Multithreading (fils d’execució simultània)  
-   Com funciona: Cada nucli pot gestionar múltiples fils d’execució (threads) gràcies a tecnologies com Hyper-Threading (Intel) o Simultaneous Multi-Threading (AMD). Això permet simular múltiples "nuclis virtuals" per nucli físic.  
+1\. Multithreading (fils dâ€™execuciÃ³ simultÃ nia)  
+   Com funciona: Cada nucli pot gestionar mÃºltiples fils dâ€™execuciÃ³ (threads) grÃ cies a tecnologies com Hyper-Threading (Intel) o Simultaneous Multi-Threading (AMD). AixÃ² permet simular mÃºltiples "nuclis virtuals" per nucli fÃ­sic.  
      
    Avantatges:  
      
-   Millora la utilització dels recursos del nucli, reduint temps morts mentre s’espera a dades o operacions d’entrada/sortida.  
+   Millora la utilitzaciÃ³ dels recursos del nucli, reduint temps morts mentre sâ€™espera a dades o operacions dâ€™entrada/sortida.  
      
-   Augmenta el rendiment en aplicacions amb paral·lelisme a nivell de fil (p.ex., servidors web).  
+   Augmenta el rendiment en aplicacions amb paralÂ·lelisme a nivell de fil (p.ex., servidors web).  
      
-2\. Processament paral·lel de tasques  
-   Com funciona: Les tasques es divideixen en subtasques que s’executen simultàniament en nuclis diferents. S’utilitzen models de programació com OpenMP o MPI per gestionar-ho.  
-     
-   Avantatges:  
-     
-   Escalabilitat en càrregues de treball intenses (p.ex., renderització 3D o simulacions científiques).  
-     
-   Reducció del temps total d’execució en problemes divisiblebles (com processament d’imatges).  
-     
-3\. Vectorització (SIMD)  
-   Com funciona: Instruccions que processen múltiples dades en paral·lel dins d’un mateix nucli (p.ex., extensions AVX en x86).  
+2\. Processament paralÂ·lel de tasques  
+   Com funciona: Les tasques es divideixen en subtasques que sâ€™executen simultÃ niament en nuclis diferents. Sâ€™utilitzen models de programaciÃ³ com OpenMP o MPI per gestionar-ho.  
      
    Avantatges:  
      
-   Acceleració significativa en operacions repetitives amb dades estructurades (p.ex., càlcul matricial o processament de senyals).  
+   Escalabilitat en cÃ rregues de treball intenses (p.ex., renderitzaciÃ³ 3D o simulacions cientÃ­fiques).  
      
-   Menys sobrecarga en la gestió de fils comparat amb el multithreading.  
+   ReducciÃ³ del temps total dâ€™execuciÃ³ en problemes divisiblebles (com processament dâ€™imatges).  
      
-4\. Multiprocessament asimètric (heterogeni)  
-   Com funciona: Nuclis amb arquitectures diferents dins del mateix xip (p.ex., big.LITTLE d’ARM), on nuclis grans gestionen càrregues pesades i els petits tasques lleugeres.  
+3\. VectoritzaciÃ³ (SIMD)  
+   Com funciona: Instruccions que processen mÃºltiples dades en paralÂ·lel dins dâ€™un mateix nucli (p.ex., extensions AVX en x86).  
      
    Avantatges:  
      
-   Optimització energètica: els nuclis petits consumeixen menys energia per tasques de fons.  
+   AcceleraciÃ³ significativa en operacions repetitives amb dades estructurades (p.ex., cÃ lcul matricial o processament de senyals).  
      
-   Millor equilibri entre rendiment i eficiència en dispositius mòbils.  
+   Menys sobrecarga en la gestiÃ³ de fils comparat amb el multithreading.  
+     
+4\. Multiprocessament asimÃ¨tric (heterogeni)  
+   Com funciona: Nuclis amb arquitectures diferents dins del mateix xip (p.ex., big.LITTLE dâ€™ARM), on nuclis grans gestionen cÃ rregues pesades i els petits tasques lleugeres.  
+     
+   Avantatges:  
+     
+   OptimitzaciÃ³ energÃ¨tica: els nuclis petits consumeixen menys energia per tasques de fons.  
+     
+   Millor equilibri entre rendiment i eficiÃ¨ncia en dispositius mÃ²bils.  
      
 5\. Passatge de missatges (IPC)  
-   Com funciona: Els nuclis es comuniquen mitjançant memòria compartida o sistemes de missatgeria (p.ex., pipes o cues), utilitzat en entorns distribuïts o sistemes operatius.  
+   Com funciona: Els nuclis es comuniquen mitjanÃ§ant memÃ²ria compartida o sistemes de missatgeria (p.ex., pipes o cues), utilitzat en entorns distribuÃ¯ts o sistemes operatius.  
      
    Avantatges:  
      
-   Aïllament de processos: errors en un nucli no afecten als altres.  
+   AÃ¯llament de processos: errors en un nucli no afecten als altres.  
      
-   Flexibilitat en sistemes amb múltiples dispositius o nodes.  
+   Flexibilitat en sistemes amb mÃºltiples dispositius o nodes.  
 
 ## 3.
 
-Programació paral·lela  
-Definició: Divideix una tasca gran en parts més petites que s’executen simultàniament en diversos nuclis o processadors.
+ProgramaciÃ³ paralÂ·lela  
+DefiniciÃ³: Divideix una tasca gran en parts mÃ©s petites que sâ€™executen simultÃ niament en diversos nuclis o processadors.
 
-Objectiu: Augmentar la velocitat d’execució aprofitant la capacitat de processament múltiple.
+Objectiu: Augmentar la velocitat dâ€™execuciÃ³ aprofitant la capacitat de processament mÃºltiple.
 
 Exemple: Processar 100 imatges a la vegada, assignant cada imatge a un nucli diferent.
 
-Programació asíncrona  
-Definició: Permet executar operacions que poden trigar (com accés a xarxa o disc) sense bloquejar el fil principal, gestionant la resposta quan l’operació acaba.
+ProgramaciÃ³ asÃ­ncrona  
+DefiniciÃ³: Permet executar operacions que poden trigar (com accÃ©s a xarxa o disc) sense bloquejar el fil principal, gestionant la resposta quan lâ€™operaciÃ³ acaba.
 
-Objectiu: Mantenir l’aplicació responsiva mentre s’esperen operacions lentes.
+Objectiu: Mantenir lâ€™aplicaciÃ³ responsiva mentre sâ€™esperen operacions lentes.
 
-Exemple: Carregar dades d’una API sense congelar la interfície d’usuari.
+Exemple: Carregar dades dâ€™una API sense congelar la interfÃ­cie dâ€™usuari.
 
-Aspecte	Paral·lela	Asíncrona  
-Execució simultània	Sí, en múltiples nuclis	No necessàriament, pot ser un sol fil  
-Casos d’ús	Càlculs intensius, processament massiu	I/O, xarxa, UI responsiva  
-Bloqueig de fil	Pot bloquejar si no es gestiona bé	Evita bloqueig de fil principal  
-Exemples	Renderització, simulacions	Descàrrega fitxers, UI, missatgeria  
-Cicle de vida del mètode asíncron (segons el diagrama)  
-Crida del mètode asíncron  
-El mètode GetUrlContentLengthAsync() és cridat pel codi principal.
+Aspecte	ParalÂ·lela	AsÃ­ncrona  
+ExecuciÃ³ simultÃ nia	SÃ­, en mÃºltiples nuclis	No necessÃ riament, pot ser un sol fil  
+Casos dâ€™Ãºs	CÃ lculs intensius, processament massiu	I/O, xarxa, UI responsiva  
+Bloqueig de fil	Pot bloquejar si no es gestiona bÃ©	Evita bloqueig de fil principal  
+Exemples	RenderitzaciÃ³, simulacions	DescÃ rrega fitxers, UI, missatgeria  
+Cicle de vida del mÃ¨tode asÃ­ncron (segons el diagrama)  
+Crida del mÃ¨tode asÃ­ncron  
+El mÃ¨tode GetUrlContentLengthAsync() Ã©s cridat pel codi principal.
 
-Inicialització del client HTTP  
-Es crea un objecte HttpClient per fer la petició web.
+InicialitzaciÃ³ del client HTTP  
+Es crea un objecte HttpClient per fer la peticiÃ³ web.
 
-Inici de l’operació asíncrona  
-S’executa client.GetStringAsync(url), que retorna una tasca (Task\<string\>) que representa la descàrrega pendent.
+Inici de lâ€™operaciÃ³ asÃ­ncrona  
+Sâ€™executa client.GetStringAsync(url), que retorna una tasca (Task\<string\>) que representa la descÃ rrega pendent.
 
-Execució de treball independent  
-S’executa DoIndependentWork(), una funció que fa alguna feina mentre la descàrrega segueix en marxa.
+ExecuciÃ³ de treball independent  
+Sâ€™executa DoIndependentWork(), una funciÃ³ que fa alguna feina mentre la descÃ rrega segueix en marxa.
 
-Espera asíncrona (await)  
-Quan el codi arriba a await getStringTask, si la tasca encara no ha acabat, el mètode es suspèn i retorna el control al cridador.
+Espera asÃ­ncrona (await)  
+Quan el codi arriba a await getStringTask, si la tasca encara no ha acabat, el mÃ¨tode es suspÃ¨n i retorna el control al cridador.
 
 Reprendre quan acaba la tasca  
-Quan la descàrrega acaba, el codi es reprèn automàticament desprès de l’await.
+Quan la descÃ rrega acaba, el codi es reprÃ¨n automÃ ticament desprÃ¨s de lâ€™await.
 
 Processament del resultat  
-S’obté el contingut descarregat i es calcula la seva longitud.
+Sâ€™obtÃ© el contingut descarregat i es calcula la seva longitud.
 
 Retorn del resultat  
-Es retorna la longitud com a resultat de la tasca asíncrona.
+Es retorna la longitud com a resultat de la tasca asÃ­ncrona.
 
 Resum visual (seguint el diagrama):
 
-L’operació asíncrona permet fer altres tasques mentre s’espera.
+Lâ€™operaciÃ³ asÃ­ncrona permet fer altres tasques mentre sâ€™espera.
 
 El fil principal no queda bloquejat.
 
-Quan la tasca asíncrona acaba, el codi continua automàticament.
+Quan la tasca asÃ­ncrona acaba, el codi continua automÃ ticament.
 
-Quin tipus de programació utilitzar en cada aplicació?  
-1\. Processament de lots d’imatges  
-Tipus: Programació paral·lela
+Quin tipus de programaciÃ³ utilitzar en cada aplicaciÃ³?  
+1\. Processament de lots dâ€™imatges  
+Tipus: ProgramaciÃ³ paralÂ·lela
 
-Raó: Cada imatge es pot processar independentment. Dividir el lot entre diversos nuclis permet processar més imatges alhora i reduir el temps total.
+RaÃ³: Cada imatge es pot processar independentment. Dividir el lot entre diversos nuclis permet processar mÃ©s imatges alhora i reduir el temps total.
 
-2\. Aplicació d’escriptori per a usuaris (UI fluida)  
-Tipus: Programació asíncrona
+2\. AplicaciÃ³ dâ€™escriptori per a usuaris (UI fluida)  
+Tipus: ProgramaciÃ³ asÃ­ncrona
 
-Raó: Les operacions lentes (com carregar fitxers o dades de xarxa) han de ser asíncrones per no bloquejar la interfície d’usuari i mantenir-la responsiva.
+RaÃ³: Les operacions lentes (com carregar fitxers o dades de xarxa) han de ser asÃ­ncrones per no bloquejar la interfÃ­cie dâ€™usuari i mantenir-la responsiva.
 
-3\. Aplicació de missatgeria en temps real  
-Tipus: Programació asíncrona
+3\. AplicaciÃ³ de missatgeria en temps real  
+Tipus: ProgramaciÃ³ asÃ­ncrona
 
-Raó: L’aplicació ha d’esperar missatges de la xarxa sense bloquejar-se. L’asíncronia permet rebre i enviar missatges mentre la UI segueix activa.
+RaÃ³: Lâ€™aplicaciÃ³ ha dâ€™esperar missatges de la xarxa sense bloquejar-se. Lâ€™asÃ­ncronia permet rebre i enviar missatges mentre la UI segueix activa.
 
-4\. Renderització de gràfics en 3D  
-Tipus: Programació paral·lela
+4\. RenderitzaciÃ³ de grÃ fics en 3D  
+Tipus: ProgramaciÃ³ paralÂ·lela
 
-Raó: La imatge es pot dividir en blocs petits que es poden renderitzar simultàniament en diferents nuclis, accelerant molt el procés.
+RaÃ³: La imatge es pot dividir en blocs petits que es poden renderitzar simultÃ niament en diferents nuclis, accelerant molt el procÃ©s.
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/_qWLA2_7)
